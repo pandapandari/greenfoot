@@ -34,8 +34,4 @@ public class sand2 extends World
     public void Text(){
        showText("score : "+ score , 60, 30);
     }
-    public void failText(){
-    showText("패배",30,30);
-    }
-    
 }
