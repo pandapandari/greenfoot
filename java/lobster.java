@@ -12,6 +12,8 @@ public class lobster extends Animal
      * Act - do whatever the lobster wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    private static final String fail = "실패";
     public void act() 
     { 
       turnAtEdge();
@@ -22,7 +24,12 @@ public class lobster extends Animal
     }
     public void lookForCrab(){
         if ( isTouching(crab.class) ){
+            World w = getWorld();
+            Greenfoot gf = new Greenfoot();
             removeTouching(crab.class);
+            w.showText(fail,300,250);
+            gf.stop();
+            w.stopped();
         }
     } 
     
